@@ -26,4 +26,4 @@ Designed to minimize direct wallet-to-wallet exposure and improve transaction se
 
 ## Status
 In active development and experimentation.  
-Exploring scalable privacy infrastructure and backend architecture on Solana.
+Exploring scalable privacy infrastructure and backend architecture on Solana
