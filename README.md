@@ -1,7 +1,7 @@
 # Metricon Labs
 
 Privacy layer on Solana.  
-Move assets without the noise.
+Move assets without the noise
 
 ## Overview
 Metricon Labs is a privacy-focused blockchain infrastructure project built on Solana.  
