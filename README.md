@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./MetriconTransparentLogo.jpg" width="180" />
+  <img src="MetriconTransparentLogo.png" width="200"/>
 </p>
 
 <h1 align="center">Metricon Labs</h1>
@@ -8,6 +8,8 @@
   Privacy infrastructure layer for Solana.<br/>
   Move assets without the noise.
 </p>
+
+---
 
 ---
 
