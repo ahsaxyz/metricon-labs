@@ -1,0 +1,19 @@
+[images]
+  remote_images = [
+    "https://source.unsplash.com/.*",
+    "https://images.unsplash.com/.*",
+    "https://ext.same-assets.com/.*",
+    "https://ugc.same-assets.com/.*",
+    "https://s2.coinmarketcap.com/.*"
+  ]
+
+[build]
+  command = "rm -rf src/contexts/AnchorContext.tsx src/lib/program .next node_modules/.cache && npm ci --legacy-peer-deps --no-audit --no-fund && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
