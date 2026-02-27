@@ -1,0 +1,20 @@
+[package]
+name = "metricon-vault"
+version = "0.1.0"
+description = "Metricon Privacy Vault - Phase 1 MVP"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "metricon_vault"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
