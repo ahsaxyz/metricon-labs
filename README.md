@@ -15,9 +15,6 @@
 
 # Metricon Labs
 
-> Privacy infrastructure layer for Solana.  
-> Move assets without the noise.
-
 ---
 
 ## Overview
