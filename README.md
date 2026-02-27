@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="./MetriconLogo.jpg" width="180" />
+</p>
+
+<h1 align="center">Metricon Labs</h1>
+
+<p align="center">
+  Privacy infrastructure layer for Solana.<br/>
+  Move assets without the noise.
+</p>
+
+---
+
 # Metricon Labs
 
 > Privacy infrastructure layer for Solana.  
