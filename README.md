@@ -88,6 +88,6 @@ Website: https://www.metriconlabs.com/
 
 X: https://x.com/MetriconLabs
 
-GitHub: github.com/ahsaxyz/metricon-labs
+GitHub: www.github.com/ahsaxyz/metricon-labs
 
 © 2026 Metricon Labs
