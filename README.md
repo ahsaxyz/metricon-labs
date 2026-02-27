@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./MetriconLogo.jpg" width="180" />
+  <img src="./MetriconTransparentLogo.jpg" width="180" />
 </p>
 
 <h1 align="center">Metricon Labs</h1>
