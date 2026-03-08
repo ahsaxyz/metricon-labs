@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { EyeOff, Loader2, Wallet, Clock } from "lucide-react";
-import TokenSelector, { TOKENS, type Token } from "../TokenSelector";
+import TokenSelector, { TOKENS, type Token } from "../ui/TokenSelector";
 import { useWalletConnection } from "@/hooks/useWalletConnection";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { useVault } from "@/hooks/useVault";
