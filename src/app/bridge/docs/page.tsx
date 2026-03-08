@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/ui/Navbar";
 import {
   ChevronRight,
   Search,
