@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import Navbar from "@/components/ui/Navbar";
+import SiteFooter from "@/components/ui/SiteFooter";
 import BridgeTab from "@/components/tabs/BridgeTab";
 import { ArrowUpDown, ArrowLeft, Globe, Shield, Zap } from "lucide-react";
 import Link from "next/link";
