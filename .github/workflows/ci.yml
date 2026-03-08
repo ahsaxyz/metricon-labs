@@ -3,42 +3,38 @@ name: Metricon CI
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   frontend:
     name: Frontend Build
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+    defaults:
+      run:
+        working-directory: src
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm install
 
-      - name: Build frontend
-        run: npm run build
+      - run: npm run build
 
   rust-check:
     name: Rust Check
     runs-on: ubuntu-latest
+
     defaults:
       run:
-        working-directory: programs/metricon
+        working-directory: programs/metricon_vault/src
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@stable
 
-      - name: Run cargo check
-        run: cargo check
+      - run: cargo check
