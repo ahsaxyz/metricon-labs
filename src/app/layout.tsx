@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Syne } from "next/font/google";
 import "./globals.css";
-import ClientProviders from "@/components/ClientProviders";
+import ClientProviders from "@/components/ui/ClientProviders";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
