@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import Navbar from "@/components/ui/Navbar";
+import SiteFooter from "@/components/ui/SiteFooter";
 import PortfolioTab from "@/components/tabs/PortfolioTab";
 import { Wallet, ArrowRight, Eye, Shield, BarChart3 } from "lucide-react";
 import Link from "next/link";
