@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import Navbar from "@/components/ui/Navbar";
+import SiteFooter from "@/components/ui/SiteFooter";
 import RevealTab from "@/components/tabs/RevealTab";
 import { EyeOff, ArrowRight, ArrowLeft, Clock, Shield, Wallet } from "lucide-react";
 import Link from "next/link";
