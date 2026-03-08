@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import Navbar from "@/components/ui/Navbar";
+import SiteFooter from "@/components/ui/SiteFooter";
 import ProductSection from "@/components/ProductSection";
 import { Eye, EyeOff, ArrowLeftRight, ArrowUpDown, Shield, Lock, Zap, Globe, ChevronDown } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
