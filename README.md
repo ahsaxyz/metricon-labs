@@ -71,7 +71,7 @@ Routing layers are designed to reduce observable behavioral patterns without int
 ## Metricon Protocol Architecture
 
 <p align="center">
-  <img src="docs/architecture.png" width="450"/>
+  <img src="docs/architecture.png" width="350"/>
 </p>
 
 ## High-Level Architecture
