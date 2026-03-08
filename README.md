@@ -68,16 +68,17 @@ Routing layers are designed to reduce observable behavioral patterns without int
 
 ---
 
-# High-Level Architecture
+## High-Level Architecture
 
+```
 User Wallet
-↓
+   ↓
 Vault PDA (Program Controlled)
-↓
+   ↓
 Routing / Execution Layer
-↓
+   ↓
 Destination Wallet / Bridge / Protocol
-
+```
 
 This architecture separates **user identity patterns** from execution logic while remaining fully verifiable on-chain.
 
@@ -96,34 +97,34 @@ Metricon is built using a modern Solana development stack.
 
 ---
 
-# Repository Structure
+## Repository Structure
 
+```
 programs/metricon_vault → Anchor smart contract (Rust)
-src/ → Next.js frontend
-relayer/ → Execution relay logic
-supabase/ → Database schema and backend configuration
-idl/ → Anchor IDL for client integration
-docs/ → Protocol documentation
-
+src/                    → Next.js frontend
+relayer/                → Execution relay logic
+supabase/               → Database schema and backend configuration
+idl/                    → Anchor IDL for client integration
+docs/                   → Protocol documentation
+```
 
 ---
 
-# Whitepaper
+## Whitepaper
 
 The full protocol design and system architecture are documented in the Metricon whitepaper.
 
 See:
 
-docs/whitepaper.md
-
+`docs/whitepaper.md`
 
 The whitepaper outlines:
 
-- system architecture  
-- vault custody model  
-- relayer execution layer  
-- privacy design principles  
-- future development roadmap  
+- system architecture
+- vault custody model
+- relayer execution layer
+- privacy design principles
+- future development roadmap
 
 ---
 
