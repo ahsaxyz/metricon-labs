@@ -73,6 +73,7 @@ Routing layers are designed to reduce observable behavioral patterns without int
 <p align="center">
   <img src="docs/architecture.png" width="850"/>
 </p>
+
 ## High-Level Architecture
 
 ```
