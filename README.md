@@ -9,39 +9,66 @@
   Move assets without the noise.
 </p>
 
----
+<p align="center">
 
+![Solana](https://img.shields.io/badge/Solana-Protocol-9945FF?style=flat&logo=solana)
+![Anchor](https://img.shields.io/badge/Anchor-Rust-blue)
+![Next.js](https://img.shields.io/badge/Next.js-Frontend-black?logo=nextdotjs)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active%20development-orange)
+
+</p>
+
+---
 
 # Metricon Labs
 
----
+Metricon Labs is building **privacy-oriented execution infrastructure for Solana**.
 
-## Overview
+Public blockchains expose transaction intent by default — wallet activity, swap size, routing paths, and behavioral patterns are visible in real time. Metricon explores architectural solutions designed to reduce unnecessary signal leakage while maintaining performance, composability, and transparency.
 
-Metricon Labs is a privacy-focused infrastructure project building stealth-oriented execution tooling on Solana.
+The objective is simple:
 
-Public blockchains expose transaction intent by default — wallet activity, swap size, routing paths, and behavioral patterns are visible in real time. Metricon explores architectural solutions designed to reduce unnecessary signal leakage while maintaining performance, composability, and developer transparency.
-
-The objective is simple: enable cleaner execution without sacrificing speed or trust.
+**Enable cleaner on-chain execution without sacrificing speed, trust, or composability.**
 
 ---
 
-## Core Concepts
+# Overview
 
-Metricon is developing a vault-based execution architecture that separates user intent from direct wallet exposure. Instead of broadcasting raw activity from a primary wallet, transactions route through structured vault logic designed to improve operational discretion.
+Metricon is a vault-based execution architecture designed to separate **user intent** from direct wallet exposure.
 
-### Areas of Development
+Instead of broadcasting activity directly from a primary wallet, transactions route through program-controlled vaults and structured execution layers that help reduce unnecessary signal leakage while remaining fully auditable on-chain.
 
-- Vault-based PDA architecture  
-- Privacy-conscious routing mechanisms  
-- Swap and bridge execution flows  
-- Relayer-assisted transaction separation  
-- Full-stack dashboard for vault interaction  
-- Secure backend integration (Supabase)  
+Metricon is being designed as a modular infrastructure layer that can support:
+
+- private asset movement  
+- stealth-oriented routing  
+- controlled execution flows  
+- relayer-assisted transaction handling  
 
 ---
 
-## High-Level Architecture
+# Core Concepts
+
+Metricon focuses on architectural primitives that improve execution privacy while preserving the transparency of public blockchains.
+
+### Vault-Based Execution
+
+Assets are deposited into **program-derived vault accounts (PDAs)** managed by the Metricon smart contract.
+
+Vaults separate custody from execution signaling and provide a controlled environment for asset routing.
+
+### Relayer-Assisted Execution
+
+Relayers monitor withdrawal or routing requests and execute transactions on behalf of users, reducing direct wallet-to-wallet correlations.
+
+### Privacy-Conscious Routing
+
+Routing layers are designed to reduce observable behavioral patterns without introducing opaque custody or centralized control.
+
+---
+
+# High-Level Architecture
 
 User Wallet
 ↓
@@ -52,11 +79,13 @@ Routing / Execution Layer
 Destination Wallet / Bridge / Protocol
 
 
-The design reduces direct wallet-to-wallet exposure and isolates execution logic from user identity patterns while remaining fully programmatic and auditable.
+This architecture separates **user identity patterns** from execution logic while remaining fully verifiable on-chain.
 
 ---
 
-## Tech Stack
+# Tech Stack
+
+Metricon is built using a modern Solana development stack.
 
 - **Solana**
 - **Anchor (Rust)**
@@ -67,38 +96,74 @@ The design reduces direct wallet-to-wallet exposure and isolates execution logic
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 programs/metricon_vault → Anchor smart contract (Rust)
 src/ → Next.js frontend
 relayer/ → Execution relay logic
-supabase/ → Database schema
+supabase/ → Database schema and backend configuration
 idl/ → Anchor IDL for client integration
+docs/ → Protocol documentation
+
 
 ---
 
-## Development Status
+# Whitepaper
 
-Metricon is currently in active development.
+The full protocol design and system architecture are documented in the Metricon whitepaper.
 
-The smart contract, relayer logic, and frontend dashboard are evolving as vault mechanics are refined, execution flows are improved, and overall security design is strengthened.
+See:
 
-All major architectural decisions and smart contract logic are documented within this repository.
+docs/whitepaper.md
 
-## Philosophy
+
+The whitepaper outlines:
+
+- system architecture  
+- vault custody model  
+- relayer execution layer  
+- privacy design principles  
+- future development roadmap  
+
+---
+
+# Development Status
+
+Metricon is currently in **active development**.
+
+Core components currently under development include:
+
+- vault smart contract mechanics  
+- relayer execution infrastructure  
+- frontend vault management dashboard  
+- swap and bridge routing flows  
+- security and execution design improvements  
+
+Major architectural decisions and protocol mechanics are documented within this repository.
+
+---
+
+# Philosophy
 
 Privacy and transparency are not opposites.
 
-Execution privacy should protect users from unnecessary exposure, while code and architecture remain open, documented, and auditable.
+Users should be able to execute transactions without unnecessary exposure, while protocol design and implementation remain open, documented, and auditable.
 
-Metricon is built with that balance in mind.
+Metricon is built around this balance.
 
-Links
+---
 
-Website: https://www.metriconlabs.com/
+# Links
 
-X: https://x.com/MetriconLabs
+**Website**  
+https://www.metriconlabs.com
 
-GitHub: www.github.com/ahsaxyz/metricon-labs
+**X / Twitter**  
+https://x.com/MetriconLabs
+
+**GitHub**  
+https://github.com/ahsaxyz/metricon-labs
+
+---
 
 © 2026 Metricon Labs
