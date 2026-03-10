@@ -6,7 +6,7 @@ import ClientProviders from "@/components/ui/ClientProviders";
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
-  display: "swap",
+  display: "swp",
 });
 
 const syne = Syne({
