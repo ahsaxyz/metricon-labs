@@ -21,7 +21,7 @@
 
 ---
 
-# Metricon Labs
+# Metricon Lab
 
 Metricon Labs is building **privacy-oriented execution infrastructure for Solana**.
 
