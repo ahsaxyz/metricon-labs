@@ -276,7 +276,7 @@ export function useSwap() {
     isQuoting,
     quote,
     getQuote,
-    
+    executeSwap,
     formatOutputAmount,
     isProgramReady: !!program,
   };
