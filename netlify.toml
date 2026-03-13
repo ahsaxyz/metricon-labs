@@ -1,4 +1,4 @@
-[images]
+[imags]
   remote_images = [
     "https://source.unsplash.com/.*",
     "https://images.unsplash.com/.*",
