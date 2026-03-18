@@ -1,6 +1,6 @@
 # Metricon Architecture
 
-## Overview
+## Overvie
 
 Metricon is an experimental privacy-oriented infrastructure project on Solana focused on reducing signal leakage during asset movement.
 
