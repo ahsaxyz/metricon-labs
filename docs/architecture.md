@@ -1,4 +1,4 @@
-# Metricon Architectur
+# Metricon Architecture
 
 ## Overview
 
