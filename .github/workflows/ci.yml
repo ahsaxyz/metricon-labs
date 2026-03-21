@@ -9,26 +9,20 @@ jobs:
     name: Frontend Build
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+    defaults:
+      run:
+        working-directory: src   # 🔥 THIS IS THE FIX
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
-        working-directory: ./
-        run: npm install
+      - run: npm install
 
-      - name: Verify package scripts
-        working-directory: ./
-        run: npm run
-
-      - name: Build frontend
-        working-directory: ./
-        run: npm run build
+      - run: npm run build
 
   rust-check:
     name: Rust Check
@@ -39,11 +33,8 @@ jobs:
         working-directory: programs/metricon_vault/src
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@stable
 
-      - name: Run cargo check
-        run: cargo check
+      - run: cargo check
