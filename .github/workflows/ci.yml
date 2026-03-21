@@ -16,9 +16,12 @@ jobs:
         with:
           node-version: 20
 
+      # Install from root (where package.json is)
       - run: npm install
 
+      # Build from src (where Next app actually lives)
       - run: npm run build
+        working-directory: ./src
 
   rust-check:
     name: Rust Check
