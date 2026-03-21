@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, ReactNode, useMemo } from "react";
+import { ReactNode, useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -13,21 +13,20 @@ import {
 import { BackpackWalletAdapter } from "@solana/wallet-adapter-backpack";
 import { clusterApiUrl } from "@solana/web3.js";
 
-// Import wallet adapter styles
 import "@solana/wallet-adapter-react-ui/styles.css";
 
 interface WalletContextProviderProps {
   children: ReactNode;
 }
 
-const WalletContextProvider: FC<WalletContextProviderProps> = ({ children }) => {
-  // Use RPC URL from environment variable, fallback to public mainnet
+export default function WalletContextProvider({
+  children,
+}: WalletContextProviderProps) {
   const endpoint = useMemo(
     () => process.env.NEXT_PUBLIC_RPC_URL || clusterApiUrl("mainnet-beta"),
     []
   );
 
-  // Initialize wallets
   const wallets = useMemo(
     () => [
       new PhantomWalletAdapter(),
@@ -44,6 +43,4 @@ const WalletContextProvider: FC<WalletContextProviderProps> = ({ children }) => 
       </WalletProvider>
     </ConnectionProvider>
   );
-};
-
-export default WalletContextProvider;
+}
