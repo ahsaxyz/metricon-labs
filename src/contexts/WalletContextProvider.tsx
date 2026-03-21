@@ -1,11 +1,13 @@
 "use client";
 
-import { ReactNode, useMemo } from "react";
+import type { ComponentType, ReactNode } from "react";
+import { useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import type { Adapter } from "@solana/wallet-adapter-base";
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
@@ -19,9 +21,22 @@ interface WalletContextProviderProps {
   children: ReactNode;
 }
 
-// 🔑 Fix: cast providers to any to bypass broken type defs
-const SafeConnectionProvider: any = ConnectionProvider;
-const SafeWalletProvider: any = WalletProvider;
+type SafeConnectionProviderProps = {
+  endpoint: string;
+  children: ReactNode;
+};
+
+type SafeWalletProviderProps = {
+  wallets: Adapter[];
+  autoConnect?: boolean;
+  children: ReactNode;
+};
+
+const SafeConnectionProvider =
+  ConnectionProvider as unknown as ComponentType<SafeConnectionProviderProps>;
+
+const SafeWalletProvider =
+  WalletProvider as unknown as ComponentType<SafeWalletProviderProps>;
 
 export default function WalletContextProvider({
   children,
@@ -31,7 +46,7 @@ export default function WalletContextProvider({
     []
   );
 
-  const wallets = useMemo(
+  const wallets = useMemo<Adapter[]>(
     () => [
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
