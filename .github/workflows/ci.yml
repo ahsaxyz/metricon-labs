@@ -10,18 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Install from root (where package.json is)
-      - run: npm install
+      - name: Install dependencies
+        working-directory: ./
+        run: npm install
 
-      # Build from src (where Next app actually lives)
-      - run: npm run build
-        working-directory: ./src
+      - name: Verify package scripts
+        working-directory: ./
+        run: npm run
+
+      - name: Build frontend
+        working-directory: ./
+        run: npm run build
 
   rust-check:
     name: Rust Check
@@ -32,8 +39,11 @@ jobs:
         working-directory: programs/metricon_vault/src
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: dtolnay/rust-toolchain@stable
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
 
-      - run: cargo check
+      - name: Run cargo check
+        run: cargo check
