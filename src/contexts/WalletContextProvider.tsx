@@ -1,7 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
-import { useMemo } from "react";
+import { ReactNode, useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -16,9 +15,13 @@ import { clusterApiUrl } from "@solana/web3.js";
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 
-type WalletContextProviderProps = {
+interface WalletContextProviderProps {
   children: ReactNode;
-};
+}
+
+// 🔑 Fix: cast providers to any to bypass broken type defs
+const SafeConnectionProvider: any = ConnectionProvider;
+const SafeWalletProvider: any = WalletProvider;
 
 export default function WalletContextProvider({
   children,
@@ -38,10 +41,10 @@ export default function WalletContextProvider({
   );
 
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
+    <SafeConnectionProvider endpoint={endpoint}>
+      <SafeWalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>{children}</WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+      </SafeWalletProvider>
+    </SafeConnectionProvider>
   );
 }
