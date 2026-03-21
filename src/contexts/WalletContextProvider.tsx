@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useMemo } from "react";
+import type { ReactNode } from "react";
+import { useMemo } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -15,9 +16,9 @@ import { clusterApiUrl } from "@solana/web3.js";
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 
-interface WalletContextProviderProps {
+type WalletContextProviderProps = {
   children: ReactNode;
-}
+};
 
 export default function WalletContextProvider({
   children,
