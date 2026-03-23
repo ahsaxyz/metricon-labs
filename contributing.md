@@ -1,6 +1,6 @@
 ## Contributing
 
-Metricon Labs welcomes contributions from developers interested in privacy infrastructure and Solana protocol design
+Metricon Labs welcomes contributions from developers interested in privacy infrastructure and Solana protocol design.
 
 ### Ways to Contribute
 
