@@ -33,7 +33,7 @@ The objective is simple:
 
 ---
 
-# Overvie
+# Overview
 
 Metricon is a vault-based execution architecture designed to separate **user intent** from direct wallet exposure.
 
