@@ -6,7 +6,7 @@
 
 <p align="center">
   Privacy infrastructure layer for Solana.<br/>
-  Move assets without the noise
+  Move assets without the noise.
 </p>
 
 <p align="center">
