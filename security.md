@@ -1,6 +1,6 @@
 ## Security
 
-Metricon is being developed with security as a primary design consideration
+Metricon is being developed with security as a primary design consideration.
 
 All vault logic, transaction routing mechanisms, and execution flows are designed to maintain verifiable on-chain behavior while minimizing unnecessary exposure of user activity patterns.
 
